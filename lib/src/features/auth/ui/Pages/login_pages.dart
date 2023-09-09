@@ -2,11 +2,13 @@ import 'package:app_cobro_v2/src/core/theme/app_colors.dart';
 import 'package:app_cobro_v2/src/features/auth/data/models/login_params.dart';
 import 'package:app_cobro_v2/src/features/auth/ui/provider/state/auth_state.dart';
 import 'package:app_cobro_v2/src/features/auth/ui/provider/user_data_provider.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import '../widget/input_widget.dart';
 
+@RoutePage()
 class LoginPages extends HookConsumerWidget {
   const LoginPages({super.key});
 

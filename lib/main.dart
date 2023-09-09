@@ -1,4 +1,4 @@
-import 'package:app_cobro_v2/src/app.dart';
+import 'package:app_cobro_v2/src/main/app.dart';
 import 'package:app_cobro_v2/src/main/app_env.dart';
 import 'package:app_cobro_v2/src/main/observers.dart';
 import 'package:flutter/material.dart';

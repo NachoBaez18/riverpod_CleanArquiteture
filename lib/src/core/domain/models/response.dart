@@ -9,6 +9,5 @@ class Response extends Equatable {
       {required this.statusCode, this.statusMessage, required this.data});
 
   @override
-  // TODO: implement props
   List<Object?> get props => [statusMessage, statusCode];
 }

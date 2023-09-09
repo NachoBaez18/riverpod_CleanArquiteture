@@ -12,6 +12,5 @@ class APIException extends Equatable implements Exception {
   final String identifier;
 
   @override
-  // TODO: implement props
   List<Object?> get props => [message, statusCode, identifier];
 }
