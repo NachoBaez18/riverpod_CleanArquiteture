@@ -1,4 +1,4 @@
-import 'package:app_cobro_v2/src/core/data/providers/dio_network_service_provider.dart';
+import 'package:app_cobro_v2/src/core/domain/providers/dio_network_service_provider.dart';
 import 'package:app_cobro_v2/src/features/auth/data/datasource/autentication_remote_data_source.dart';
 import 'package:app_cobro_v2/src/features/auth/dominio/providers/auth_provider.dart';
 import 'package:app_cobro_v2/src/features/auth/dominio/repositories/user_data_repository.dart';

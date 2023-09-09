@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:app_cobro_v2/src/core/common/utils/typedef.dart';
+import 'package:app_cobro_v2/src/core/utils/typedef.dart';
 import 'package:app_cobro_v2/src/features/auth/dominio/entities/user.dart';
 
 class UserModel extends User {
