@@ -1,6 +1,6 @@
 import 'package:app_cobro_v2/src/core/errors/exceptions.dart';
 import 'package:app_cobro_v2/src/core/errors/failure.dart';
-import 'package:app_cobro_v2/src/core/common/utils/typedef.dart';
+import 'package:app_cobro_v2/src/core/utils/typedef.dart';
 import 'package:app_cobro_v2/src/features/auth/data/datasource/autentication_remote_data_source.dart';
 import 'package:app_cobro_v2/src/features/auth/data/models/login_params.dart';
 import 'package:app_cobro_v2/src/features/auth/dominio/repositories/user_data_repository.dart';

@@ -1,4 +1,4 @@
-import 'package:app_cobro_v2/src/core/common/colores/colores.dart';
+import 'package:app_cobro_v2/src/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
@@ -25,7 +25,7 @@ class Input extends HookWidget {
         decoration: InputDecoration(
             suffixIcon: obscureText
                 ? IconButton(
-                    color: Colores.blueLigth,
+                    color: AppColors.primary,
                     icon: Icon(isVisility.value
                         ? Icons.visibility
                         : Icons.visibility_off),
@@ -34,7 +34,7 @@ class Input extends HookWidget {
                     },
                   )
                 : null,
-            fillColor: Colores.gris,
+            fillColor: AppColors.lightGrey,
             filled: true,
             border: OutlineInputBorder(
               borderSide: BorderSide.none,

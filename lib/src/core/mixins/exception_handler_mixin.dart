@@ -1,7 +1,7 @@
 import 'dart:developer';
 import 'dart:io';
 
-import 'package:app_cobro_v2/src/core/common/utils/typedef.dart';
+import 'package:app_cobro_v2/src/core/utils/typedef.dart';
 import 'package:app_cobro_v2/src/core/data/remote/network_service.dart';
 import 'package:app_cobro_v2/src/core/errors/exceptions.dart';
 import 'package:dartz/dartz.dart';
@@ -10,7 +10,7 @@ import 'package:dio/dio.dart';
 import '../domain/models/response.dart' as r;
 
 mixin ExceptionHandlerMixin on NetworkService {
-  ResultNetwork<r.Response>handleException<T extends Object>(
+  ResultNetwork<r.Response> handleException<T extends Object>(
       Future<Response<dynamic>> Function() handler,
       {String endpoint = ''}) async {
     try {
@@ -25,7 +25,7 @@ mixin ExceptionHandlerMixin on NetworkService {
       );
     } catch (e) {
       String message = '';
-       String identifier = '';
+      String identifier = '';
       int statusCode = 0;
 
       log(e.runtimeType.toString());
@@ -43,13 +43,13 @@ mixin ExceptionHandlerMixin on NetworkService {
           message = e.response?.data?['message'] ??
               'Se ha producido un error interno';
           statusCode = 1;
-           identifier = 'DioException ${e.message} \nat  $endpoint';
+          identifier = 'DioException ${e.message} \nat  $endpoint';
           break;
 
         default:
           message = 'Se ha producido un error desconocido';
           statusCode = 2;
-         identifier = 'Error desconocido ${e.toString()}\n at $endpoint';
+          identifier = 'Error desconocido ${e.toString()}\n at $endpoint';
       }
 
       return Left(

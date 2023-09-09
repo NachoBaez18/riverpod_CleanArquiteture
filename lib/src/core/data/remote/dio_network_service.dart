@@ -1,5 +1,5 @@
 import 'package:app_cobro_v2/src/config/global/app_config.dart';
-import 'package:app_cobro_v2/src/core/common/utils/typedef.dart';
+import 'package:app_cobro_v2/src/core/utils/typedef.dart';
 import 'package:app_cobro_v2/src/core/data/remote/network_service.dart';
 import 'package:app_cobro_v2/src/core/mixins/exception_handler_mixin.dart';
 import 'package:dio/dio.dart';

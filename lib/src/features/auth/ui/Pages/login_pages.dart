@@ -1,4 +1,4 @@
-import 'package:app_cobro_v2/src/core/common/colores/colores.dart';
+import 'package:app_cobro_v2/src/core/theme/app_colors.dart';
 import 'package:app_cobro_v2/src/features/auth/data/models/login_params.dart';
 import 'package:app_cobro_v2/src/features/auth/ui/provider/state/auth_state.dart';
 import 'package:app_cobro_v2/src/features/auth/ui/provider/user_data_provider.dart';
@@ -89,7 +89,7 @@ class LoginPages extends HookConsumerWidget {
                 borderRadius: BorderRadius.circular(
                     20), // Establecer bordes redondeados aquí
               ),
-              backgroundColor: Colores.blueLigth),
+              backgroundColor: AppColors.primary),
           onPressed: () async {
             debugPrint(formKey.currentState!.validate().toString());
             if (formKey.currentState!.validate()) {
