@@ -22,7 +22,7 @@ extension _EnvProperties on AppEnviroment {
   };
 
   static const _connectionStrings = {
-    AppEnviroment.DEV: 'http://192.168.0.16:8000',
+    AppEnviroment.DEV: 'http://192.168.0.16:8000/api',
     AppEnviroment.STAGING: 'http://192.168.0.16:8000',
     AppEnviroment.PROD: 'http://192.168.0.16:8000',
   };

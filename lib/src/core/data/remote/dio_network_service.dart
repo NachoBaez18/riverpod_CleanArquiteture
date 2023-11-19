@@ -1,7 +1,7 @@
-import 'package:app_cobro_v2/src/config/global/app_config.dart';
 import 'package:app_cobro_v2/src/core/utils/typedef.dart';
 import 'package:app_cobro_v2/src/core/data/remote/network_service.dart';
 import 'package:app_cobro_v2/src/core/mixins/exception_handler_mixin.dart';
+import 'package:app_cobro_v2/src/main/app_env.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:app_cobro_v2/src/core/domain/models/response.dart' as r;
@@ -28,7 +28,7 @@ class DioNetworkService extends NetworkService with ExceptionHandlerMixin {
       );
 
   @override
-  String get baseUrl => AppConfig.baseUrl;
+  String get baseUrl => EnvInfo.connectionsString;
 
   @override
   Map<String, Object> get headers => {

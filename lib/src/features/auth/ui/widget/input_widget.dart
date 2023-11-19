@@ -5,7 +5,12 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 class Input extends HookWidget {
   final TextEditingController controller;
   final bool obscureText;
-  const Input({super.key, required this.controller, this.obscureText = false});
+  final TextInputType? keyboardType;
+  const Input(
+      {super.key,
+      required this.controller,
+      this.obscureText = false,
+      this.keyboardType});
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +27,7 @@ class Input extends HookWidget {
         },
         obscureText: !isVisility.value,
         controller: controller,
+        keyboardType: keyboardType,
         decoration: InputDecoration(
             suffixIcon: obscureText
                 ? IconButton(

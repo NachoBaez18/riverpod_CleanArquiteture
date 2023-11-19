@@ -2,6 +2,7 @@ import 'package:app_cobro_v2/src/core/theme/app_colors.dart';
 import 'package:app_cobro_v2/src/features/auth/data/models/login_params.dart';
 import 'package:app_cobro_v2/src/features/auth/ui/provider/state/auth_state.dart';
 import 'package:app_cobro_v2/src/features/auth/ui/provider/user_data_provider.dart';
+import 'package:app_cobro_v2/src/routes/app_route.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -23,7 +24,8 @@ class LoginPages extends HookConsumerWidget {
         ScaffoldMessenger.of(context)
             .showSnackBar(SnackBar(content: Text(next.exception.message)));
       } else if (next is Success) {
-        debugPrint('entramos para navegar');
+        AutoRouter.of(context)
+            .pushAndPopUntil(const HomeRoute(), predicate: (_) => false);
       }
     });
 
@@ -52,6 +54,7 @@ class LoginPages extends HookConsumerWidget {
                     ),
                   ),
                   Input(
+                    keyboardType: TextInputType.emailAddress,
                     controller: emailCtrl,
                   ),
                   const Text(
